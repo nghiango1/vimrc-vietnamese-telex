@@ -21,6 +21,8 @@ Nhưng tại sao lại config như này mà không dùng kiểu code viết Func
 
 ## To đo nhưng không làm
 
+![image](https://github.com/ylsama/vimrc-vietnamese-telex/assets/31164703/0722b263-f0e7-4613-8206-0dc1da7d3b4b)
+
 - [x] Tốt nhất là đừng code function làm gì cho mất công, ai cho tiền thì mình làm, nhìn càng khó hiểu thì càng chẳng ai muốn dùng
 - [x] ChỮ IN HOA á, mƠ đI.
 
