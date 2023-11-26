@@ -1,11 +1,16 @@
 " set cursorline
 " set number
 
+let mapleader=" "
 set expandtab
+
+" This make :lmap default on, toggle with <C-^> (only in insert-mode or a-like mode) to turn lang-mode off
+set imi=1
 
 " Set tab width to 4 spaces
 set tabstop=4
 set shiftwidth=4
+
 " Auto indent on new line
 set autoindent
 
@@ -18,1091 +23,1192 @@ nmap L $
 
 " Jumping
 nnoremap <C-u> <C-u>zz
+nnoremap <C-u> <C-u>zz
 nnoremap <C-d> <C-d>zz
+inoremap <C-h> <C-Left>
+inoremap <C-l> <C-\><C-n>ea
+
+" Find/n/Replace helper
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 
 " Telex dummy
 "ao
-inoremap aos áo
-inoremap aof ào
-inoremap aoj ạo
-inoremap aor ảo
-inoremap aox ão
+lnoremap aos áo
+lnoremap aof ào
+lnoremap aoj ạo
+lnoremap aor ảo
+lnoremap aox ão
 
 "a
-inoremap as á
-inoremap af à
-inoremap aj ạ
-inoremap ar ả
-inoremap ax ã
+lnoremap as á
+lnoremap af à
+lnoremap aj ạ
+lnoremap ar ả
+lnoremap ax ã
 
-inoremap ays áy
-inoremap ayf ày
-inoremap ayj ạy
-inoremap ayr ảy
-inoremap ayx ãy
+lnoremap ays áy
+lnoremap ayf ày
+lnoremap ayj ạy
+lnoremap ayr ảy
+lnoremap ayx ãy
 
-inoremap ais ái
-inoremap aif ài
-inoremap aij ại
-inoremap air ải
-inoremap aix ãi
+lnoremap ais ái
+lnoremap aif ài
+lnoremap aij ại
+lnoremap air ải
+lnoremap aix ãi
 
-inoremap ans án
-inoremap anf àn
-inoremap anj ạn
-inoremap anr ản
-inoremap anx ãn
+lnoremap ans án
+lnoremap anf àn
+lnoremap anj ạn
+lnoremap anr ản
+lnoremap anx ãn
 
-inoremap angs áng
-inoremap angf àng
-inoremap angj ạng
-inoremap angr ảng
-inoremap angx ãng
+lnoremap angs áng
+lnoremap angf àng
+lnoremap angj ạng
+lnoremap angr ảng
+lnoremap angx ãng
 
-inoremap anhs ánh
-inoremap anhf ành
-inoremap anhj ạnh
-inoremap anhr ảnh
-inoremap anhx ãnh
+lnoremap anhs ánh
+lnoremap anhf ành
+lnoremap anhj ạnh
+lnoremap anhr ảnh
+lnoremap anhx ãnh
 
-inoremap ams ám
-inoremap amf àm
-inoremap amj ạm
-inoremap amr ảm
-inoremap amx ãm
+lnoremap ams ám
+lnoremap amf àm
+lnoremap amj ạm
+lnoremap amr ảm
+lnoremap amx ãm
 
-inoremap acs ác
-inoremap acf àc
-inoremap acj ạc
-inoremap acr ảc
-inoremap acx ãc
+lnoremap acs ác
+lnoremap acf àc
+lnoremap acj ạc
+lnoremap acr ảc
+lnoremap acx ãc
 
-inoremap aps áp
-inoremap apf àp
-inoremap apj ạp
-inoremap apr ảp
-inoremap apx ãp
+lnoremap aps áp
+lnoremap apf àp
+lnoremap apj ạp
+lnoremap apr ảp
+lnoremap apx ãp
 
-inoremap ats át
-inoremap atf àt
-inoremap atj ạt
-inoremap atr ảt
-inoremap atx ãt
+lnoremap ats át
+lnoremap atf àt
+lnoremap atj ạt
+lnoremap atr ảt
+lnoremap atx ãt
 
 "ă
-inoremap aw ă
-inoremap aws ắ
-inoremap awf ằ
-inoremap awj ặ
-inoremap awr ẳ
-inoremap awx ẵ
+lnoremap aw ă
+lnoremap aws ắ
+lnoremap awf ằ
+lnoremap awj ặ
+lnoremap awr ẳ
+lnoremap awx ẵ
 
-inoremap awys ắy
-inoremap awyf ằy
-inoremap awyj ặy
-inoremap awyr ẳy
-inoremap awyx ẵy
+lnoremap awys ắy
+lnoremap awyf ằy
+lnoremap awyj ặy
+lnoremap awyr ẳy
+lnoremap awyx ẵy
 
-inoremap awis ắi
-inoremap awif ằi
-inoremap awij ặi
-inoremap awir ẳi
-inoremap awix ẵi
+lnoremap awis ắi
+lnoremap awif ằi
+lnoremap awij ặi
+lnoremap awir ẳi
+lnoremap awix ẵi
 
-inoremap awns ắn
-inoremap awnf ằn
-inoremap awnj ặn
-inoremap awnr ẳn
-inoremap awnx ẵn
+lnoremap awns ắn
+lnoremap awnf ằn
+lnoremap awnj ặn
+lnoremap awnr ẳn
+lnoremap awnx ẵn
 
-inoremap awngs ắng
-inoremap awngf ằng
-inoremap awngj ặng
-inoremap awngr ẳng
-inoremap awngx ẵng
+lnoremap awngs ắng
+lnoremap awngf ằng
+lnoremap awngj ặng
+lnoremap awngr ẳng
+lnoremap awngx ẵng
 
-inoremap awnhs ắnh
-inoremap awnhf ằnh
-inoremap awnhj ặnh
-inoremap awnhr ẳnh
-inoremap awnhx ẵnh
+lnoremap awnhs ắnh
+lnoremap awnhf ằnh
+lnoremap awnhj ặnh
+lnoremap awnhr ẳnh
+lnoremap awnhx ẵnh
 
-inoremap awcs ắc
-inoremap awcf ằc
-inoremap awcj ặc
-inoremap awcr ẳc
-inoremap awcx ẵc
+lnoremap awcs ắc
+lnoremap awcf ằc
+lnoremap awcj ặc
+lnoremap awcr ẳc
+lnoremap awcx ẵc
 
-inoremap awps ắp
-inoremap awpf ằp
-inoremap awpj ặp
-inoremap awpr ẳp
-inoremap awpx ẵp
+lnoremap awps ắp
+lnoremap awpf ằp
+lnoremap awpj ặp
+lnoremap awpr ẳp
+lnoremap awpx ẵp
 
-inoremap awms ắm
-inoremap awmf ằm
-inoremap awmj ặm
-inoremap awmr ẳm
-inoremap awmx ẵm
+lnoremap awms ắm
+lnoremap awmf ằm
+lnoremap awmj ặm
+lnoremap awmr ẳm
+lnoremap awmx ẵm
 
-inoremap awts ắt
-inoremap awtf ằt
-inoremap awtj ặt
-inoremap awtr ẳt
-inoremap awtx ẵt
+lnoremap awts ắt
+lnoremap awtf ằt
+lnoremap awtj ặt
+lnoremap awtr ẳt
+lnoremap awtx ẵt
 
-inoremap asw ắ
-inoremap afw ằ
-inoremap ajw ặ
-inoremap arw ẳ
-inoremap axw ẵ
+lnoremap asw ắ
+lnoremap afw ằ
+lnoremap ajw ặ
+lnoremap arw ẳ
+lnoremap axw ẵ
 
 "â
-inoremap aa â
-inoremap aas ấ
-inoremap aaf ầ
-inoremap aaj ậ
-inoremap aar ẩ
-inoremap aax ẫ
+lnoremap aa â
+lnoremap aas ấ
+lnoremap aaf ầ
+lnoremap aaj ậ
+lnoremap aar ẩ
+lnoremap aax ẫ
 
-inoremap aays ấy
-inoremap aayf ầy
-inoremap aayj ậy
-inoremap aayr ẩy
-inoremap aayx ẫy
+lnoremap aays ấy
+lnoremap aayf ầy
+lnoremap aayj ậy
+lnoremap aayr ẩy
+lnoremap aayx ẫy
 
-inoremap aais ấi
-inoremap aaif ầi
-inoremap aaij ậi
-inoremap aair ẩi
-inoremap aaix ẫi
+lnoremap aais ấi
+lnoremap aaif ầi
+lnoremap aaij ậi
+lnoremap aair ẩi
+lnoremap aaix ẫi
 
-inoremap aans ấn
-inoremap aanf ần
-inoremap aanj ận
-inoremap aanr ẩn
-inoremap aanx ẫn
+lnoremap aans ấn
+lnoremap aanf ần
+lnoremap aanj ận
+lnoremap aanr ẩn
+lnoremap aanx ẫn
 
-inoremap aangs ấng
-inoremap aangf ầng
-inoremap aangj ậng
-inoremap aangr ẩng
-inoremap aangx ẫng
+lnoremap aangs ấng
+lnoremap aangf ầng
+lnoremap aangj ậng
+lnoremap aangr ẩng
+lnoremap aangx ẫng
 
-inoremap aanhs ấnh
-inoremap aanhf ầnh
-inoremap aanhj ậnh
-inoremap aanhr ẩnh
-inoremap aanhx ẫnh
+lnoremap aanhs ấnh
+lnoremap aanhf ầnh
+lnoremap aanhj ậnh
+lnoremap aanhr ẩnh
+lnoremap aanhx ẫnh
 
-inoremap aacs ấc
-inoremap aacf ầc
-inoremap aacj ậc
-inoremap aacr ẩc
-inoremap aacx ẫc
+lnoremap aacs ấc
+lnoremap aacf ầc
+lnoremap aacj ậc
+lnoremap aacr ẩc
+lnoremap aacx ẫc
 
-inoremap aaps ấp
-inoremap aapf ầp
-inoremap aapj ập
-inoremap aapr ẩp
-inoremap aapx ẫp
+lnoremap aaps ấp
+lnoremap aapf ầp
+lnoremap aapj ập
+lnoremap aapr ẩp
+lnoremap aapx ẫp
 
-inoremap aams ấm
-inoremap aamf ầm
-inoremap aamj ậm
-inoremap aamr ẩm
-inoremap aamx ẫm
+lnoremap aams ấm
+lnoremap aamf ầm
+lnoremap aamj ậm
+lnoremap aamr ẩm
+lnoremap aamx ẫm
 
-inoremap aats ất
-inoremap aatf ầt
-inoremap aatj ật
-inoremap aatr ẩt
-inoremap aatx ẫt
+lnoremap aats ất
+lnoremap aatf ầt
+lnoremap aatj ật
+lnoremap aatr ẩt
+lnoremap aatx ẫt
 
-inoremap asa ấ
-inoremap afa ầ
-inoremap aja ậ
-inoremap ara ẩ
-inoremap axa ẫ
+lnoremap asa ấ
+lnoremap afa ầ
+lnoremap aja ậ
+lnoremap ara ẩ
+lnoremap axa ẫ
 
 "iê
-" inoremap ieens iến
-" inoremap ieenf iền
-" inoremap ieenj iện
-" inoremap ieenr iển
-" inoremap ieenx iễn
+" lnoremap ieens iến
+" lnoremap ieenf iền
+" lnoremap ieenj iện
+" lnoremap ieenr iển
+" lnoremap ieenx iễn
 
-" inoremap ieengs iếng
-" inoremap ieengf iềng
-" inoremap ieengj iệng
-" inoremap ieengr iểng
-" inoremap ieengx iễng
+" lnoremap ieengs iếng
+" lnoremap ieengf iềng
+" lnoremap ieengj iệng
+" lnoremap ieengr iểng
+" lnoremap ieengx iễng
 
 "i
-inoremap is í
-inoremap if ì
-inoremap ij ị
-inoremap ir ỉ
-inoremap ix ĩ
+lnoremap is í
+lnoremap if ì
+lnoremap ij ị
+lnoremap ir ỉ
+lnoremap ix ĩ
 
-inoremap ichs ích
-inoremap ichf ìch
-inoremap ichj ịch
-inoremap ichr ỉch
-inoremap ichx ĩch
+lnoremap ichs ích
+lnoremap ichf ìch
+lnoremap ichj ịch
+lnoremap ichr ỉch
+lnoremap ichx ĩch
 
-inoremap ics íc
-inoremap icf ìc
-inoremap icj ịc
-inoremap icr ỉc
-inoremap icx ĩc
+lnoremap ics íc
+lnoremap icf ìc
+lnoremap icj ịc
+lnoremap icr ỉc
+lnoremap icx ĩc
 
-inoremap its ít
-inoremap itf ìt
-inoremap itj ịt
-inoremap itr ỉt
-inoremap itx ĩt
+lnoremap its ít
+lnoremap itf ìt
+lnoremap itj ịt
+lnoremap itr ỉt
+lnoremap itx ĩt
 
-inoremap ins ín
-inoremap inf ìn
-inoremap inj ịn
-inoremap inr ỉn
-inoremap inx ĩn
+lnoremap ins ín
+lnoremap inf ìn
+lnoremap inj ịn
+lnoremap inr ỉn
+lnoremap inx ĩn
 
-inoremap ings íng
-inoremap ingf ìng
-inoremap ingj ịng
-inoremap ingr ỉng
-inoremap ingx ĩng
+lnoremap ings íng
+lnoremap ingf ìng
+lnoremap ingj ịng
+lnoremap ingr ỉng
+lnoremap ingx ĩng
 
-inoremap inhs ính
-inoremap inhf ình
-inoremap inhj ịnh
-inoremap inhr ỉnh
-inoremap inhx ĩnh
+lnoremap inhs ính
+lnoremap inhf ình
+lnoremap inhj ịnh
+lnoremap inhr ỉnh
+lnoremap inhx ĩnh
 
-inoremap ims ím
-inoremap imf ìm
-inoremap imj ịm
-inoremap imr ỉm
-inoremap imx ĩm
+lnoremap ims ím
+lnoremap imf ìm
+lnoremap imj ịm
+lnoremap imr ỉm
+lnoremap imx ĩm
 
-inoremap ips íp
-inoremap ipf ìp
-inoremap ipj ịp
-inoremap ipr ỉp
-inoremap ipx ĩp
+lnoremap ips íp
+lnoremap ipf ìp
+lnoremap ipj ịp
+lnoremap ipr ỉp
+lnoremap ipx ĩp
 
-inoremap its ít
-inoremap itf ìt
-inoremap itj ịt
-inoremap itr ỉt
-inoremap itx ĩt
+lnoremap its ít
+lnoremap itf ìt
+lnoremap itj ịt
+lnoremap itr ỉt
+lnoremap itx ĩt
 
 "e
-inoremap es é
-inoremap ef è
-inoremap ej ẹ
-inoremap er ẻ
-inoremap ex ẽ
+lnoremap es é
+lnoremap ef è
+lnoremap ej ẹ
+lnoremap er ẻ
+lnoremap ex ẽ
 
-inoremap ecs éc
-inoremap ecf èc
-inoremap ecj ẹc
-inoremap ecr ẻc
-inoremap ecx ẽc
+lnoremap ecs éc
+lnoremap ecf èc
+lnoremap ecj ẹc
+lnoremap ecr ẻc
+lnoremap ecx ẽc
 
-" inoremap eys éy
-" inoremap eyf èy
-" inoremap eyj ẹy
-" inoremap eyr ẻy
-" inoremap eyx ẽy
+" lnoremap eys éy
+" lnoremap eyf èy
+" lnoremap eyj ẹy
+" lnoremap eyr ẻy
+" lnoremap eyx ẽy
 
-" inoremap eis éi
-" inoremap eif èi
-" inoremap eij ẹi
-" inoremap eir ẻi
-" inoremap eix ẽi
+" lnoremap eis éi
+" lnoremap eif èi
+" lnoremap eij ẹi
+" lnoremap eir ẻi
+" lnoremap eix ẽi
 
-inoremap ens én
-inoremap enf èn
-inoremap enj ẹn
-inoremap enr ẻn
-inoremap enx ẽn
+lnoremap ens én
+lnoremap enf èn
+lnoremap enj ẹn
+lnoremap enr ẻn
+lnoremap enx ẽn
 
-inoremap engs éng
-inoremap engf èng
-inoremap engj ẹng
-inoremap engr ẻng
-inoremap engx ẽng
+lnoremap engs éng
+lnoremap engf èng
+lnoremap engj ẹng
+lnoremap engr ẻng
+lnoremap engx ẽng
 
-" inoremap enhs énh
-" inoremap enhf ènh
-" inoremap enhj ẹnh
-" inoremap enhr ẻnh
-" inoremap enhx ẽnh
+" lnoremap enhs énh
+" lnoremap enhf ènh
+" lnoremap enhj ẹnh
+" lnoremap enhr ẻnh
+" lnoremap enhx ẽnh
 
-inoremap eps ép
-inoremap epf èp
-inoremap epj ẹp
-inoremap epr ẻp
-inoremap epx ẽp
+lnoremap eps ép
+lnoremap epf èp
+lnoremap epj ẹp
+lnoremap epr ẻp
+lnoremap epx ẽp
 
-inoremap ems ém
-inoremap emf èm
-inoremap emj ẹm
-inoremap emr ẻm
-inoremap emx ẽm
+lnoremap ems ém
+lnoremap emf èm
+lnoremap emj ẹm
+lnoremap emr ẻm
+lnoremap emx ẽm
 
-inoremap ets ét
-inoremap etf èt
-inoremap etj ẹt
-inoremap etr ẻt
-inoremap etx ẽt
+lnoremap ets ét
+lnoremap etf èt
+lnoremap etj ẹt
+lnoremap etr ẻt
+lnoremap etx ẽt
 
 "êu
-inoremap eeus ếu
-inoremap eeuf ều
-inoremap eeuj ệu
-inoremap eeur ểu
-inoremap eeux ễu
+lnoremap eeus ếu
+lnoremap eeuf ều
+lnoremap eeuj ệu
+lnoremap eeur ểu
+lnoremap eeux ễu
 
 "ê
-inoremap ee ê
-inoremap ees ế
-inoremap eef ề
-inoremap eej ệ
-inoremap eer ể
-inoremap eex ễ
+lnoremap ee ê
+lnoremap ees ế
+lnoremap eef ề
+lnoremap eej ệ
+lnoremap eer ể
+lnoremap eex ễ
 
-inoremap ese ế
-inoremap efe ề
-inoremap eje ệ
-inoremap ere ể
-inoremap exe ễ
+lnoremap ese ế
+lnoremap efe ề
+lnoremap eje ệ
+lnoremap ere ể
+lnoremap exe ễ
 
-inoremap eeys ếy
-inoremap eeyf ềy
-inoremap eeyj ệy
-inoremap eeyr ểy
-inoremap eeyx ễy
+lnoremap eeys ếy
+lnoremap eeyf ềy
+lnoremap eeyj ệy
+lnoremap eeyr ểy
+lnoremap eeyx ễy
 
-inoremap eeis ếi
-inoremap eeif ềi
-inoremap eeij ệi
-inoremap eeir ểi
-inoremap eeix ễi
+lnoremap eeis ếi
+lnoremap eeif ềi
+lnoremap eeij ệi
+lnoremap eeir ểi
+lnoremap eeix ễi
 
-inoremap eens ến
-inoremap eenf ền
-inoremap eenj ện
-inoremap eenr ển
-inoremap eenx ễn
+lnoremap eens ến
+lnoremap eenf ền
+lnoremap eenj ện
+lnoremap eenr ển
+lnoremap eenx ễn
 
-inoremap eengs ếng
-inoremap eengf ềng
-inoremap eengj ệng
-inoremap eengr ểng
-inoremap eengx ễng
+lnoremap eengs ếng
+lnoremap eengf ềng
+lnoremap eengj ệng
+lnoremap eengr ểng
+lnoremap eengx ễng
 
-inoremap eenhs ếnh
-inoremap eenhf ềnh
-inoremap eenhj ệnh
-inoremap eenhr ểnh
-inoremap eenhx ễnh
+lnoremap eenhs ếnh
+lnoremap eenhf ềnh
+lnoremap eenhj ệnh
+lnoremap eenhr ểnh
+lnoremap eenhx ễnh
 
-inoremap eecs ếc
-inoremap eecf ềc
-inoremap eecj ệc
-inoremap eecr ểc
-inoremap eecx ễc
+lnoremap eecs ếc
+lnoremap eecf ềc
+lnoremap eecj ệc
+lnoremap eecr ểc
+lnoremap eecx ễc
 
-inoremap eeps ếp
-inoremap eepf ềp
-inoremap eepj ệp
-inoremap eepr ểp
-inoremap eepx ễp
+lnoremap eeps ếp
+lnoremap eepf ềp
+lnoremap eepj ệp
+lnoremap eepr ểp
+lnoremap eepx ễp
 
-inoremap eems ếm
-inoremap eemf ềm
-inoremap eemj ệm
-inoremap eemr ểm
-inoremap eemx ễm
+lnoremap eems ếm
+lnoremap eemf ềm
+lnoremap eemj ệm
+lnoremap eemr ểm
+lnoremap eemx ễm
 
-inoremap eets ết
-inoremap eetf ềt
-inoremap eetj ệt
-inoremap eetr ểt
-inoremap eetx ễt
+lnoremap eets ết
+lnoremap eetf ềt
+lnoremap eetj ệt
+lnoremap eetr ểt
+lnoremap eetx ễt
 
 "oa
-" inoremap oas oá
-" inoremap oaf oà
-" inoremap oaj oạ
-" inoremap oar oả
-" inoremap oax oã
+" lnoremap oas oá
+" lnoremap oaf oà
+" lnoremap oaj oạ
+" lnoremap oar oả
+" lnoremap oax oã
 " 
-" inoremap oacs oác
-" inoremap oacf oàc
-" inoremap oacj oạc
-" inoremap oacr oảc
-" inoremap oacx oãc
+" lnoremap oacs oác
+" lnoremap oacf oàc
+" lnoremap oacj oạc
+" lnoremap oacr oảc
+" lnoremap oacx oãc
 " 
-" inoremap oats oát
-" inoremap oatf oàt
-" inoremap oatj oạt
-" inoremap oatr oảt
-" inoremap oatx oãt
+" lnoremap oats oát
+" lnoremap oatf oàt
+" lnoremap oatj oạt
+" lnoremap oatr oảt
+" lnoremap oatx oãt
 " 
-" inoremap oans oán
-" inoremap oanf oàn
-" inoremap oanj oạn
-" inoremap oanr oản
-" inoremap oanx oãn
+" lnoremap oans oán
+" lnoremap oanf oàn
+" lnoremap oanj oạn
+" lnoremap oanr oản
+" lnoremap oanx oãn
 " 
-" inoremap oangs oáng
-" inoremap oangf oàng
-" inoremap oangj oạng
-" inoremap oangr oảng
-" inoremap oangx oãng
+" lnoremap oangs oáng
+" lnoremap oangf oàng
+" lnoremap oangj oạng
+" lnoremap oangr oảng
+" lnoremap oangx oãng
 
 "o
-inoremap os ó
-inoremap of ò
-inoremap oj ọ
-inoremap or ỏ
-inoremap ox õ
+lnoremap os ó
+lnoremap of ò
+lnoremap oj ọ
+lnoremap or ỏ
+lnoremap ox õ
 
-inoremap oys óy
-inoremap oyf òy
-inoremap oyj ọy
-inoremap oyr ỏy
-inoremap oyx õy
+lnoremap oys óy
+lnoremap oyf òy
+lnoremap oyj ọy
+lnoremap oyr ỏy
+lnoremap oyx õy
 
-inoremap ois ói
-inoremap oif òi
-inoremap oij ọi
-inoremap oir ỏi
-inoremap oix õi
+lnoremap ois ói
+lnoremap oif òi
+lnoremap oij ọi
+lnoremap oir ỏi
+lnoremap oix õi
 
-inoremap ons ón
-inoremap onf òn
-inoremap onj ọn
-inoremap onr ỏn
-inoremap onx õn
+lnoremap ons ón
+lnoremap onf òn
+lnoremap onj ọn
+lnoremap onr ỏn
+lnoremap onx õn
 
-inoremap ongs óng
-inoremap ongf òng
-inoremap ongj ọng
-inoremap ongr ỏng
-inoremap ongx õng
+lnoremap ongs óng
+lnoremap ongf òng
+lnoremap ongj ọng
+lnoremap ongr ỏng
+lnoremap ongx õng
 
-inoremap onhs ónh
-inoremap onhf ònh
-inoremap onhj ọnh
-inoremap onhr ỏnh
-inoremap onhx õnh
+lnoremap onhs ónh
+lnoremap onhf ònh
+lnoremap onhj ọnh
+lnoremap onhr ỏnh
+lnoremap onhx õnh
 
-inoremap ops óp
-inoremap opf òp
-inoremap opj ọp
-inoremap opr ỏp
-inoremap opx õp
+lnoremap ops óp
+lnoremap opf òp
+lnoremap opj ọp
+lnoremap opr ỏp
+lnoremap opx õp
 
-inoremap oms óm
-inoremap omf òm
-inoremap omj ọm
-inoremap omr ỏm
-inoremap omx õm
+lnoremap oms óm
+lnoremap omf òm
+lnoremap omj ọm
+lnoremap omr ỏm
+lnoremap omx õm
 
-inoremap ocs óc
-inoremap ocf òc
-inoremap ocj ọc
-inoremap ocr ỏc
-inoremap ocx õc
+lnoremap ocs óc
+lnoremap ocf òc
+lnoremap ocj ọc
+lnoremap ocr ỏc
+lnoremap ocx õc
 
-inoremap ots ót
-inoremap otf òt
-inoremap otj ọt
-inoremap otr ỏt
-inoremap otx õt
+lnoremap ots ót
+lnoremap otf òt
+lnoremap otj ọt
+lnoremap otr ỏt
+lnoremap otx õt
 
 "ô
-inoremap oo ô
-inoremap oos ố
-inoremap oof ồ
-inoremap ooj ộ
-inoremap oor ổ
-inoremap oox ỗ
+lnoremap oo ô
+lnoremap oos ố
+lnoremap oof ồ
+lnoremap ooj ộ
+lnoremap oor ổ
+lnoremap oox ỗ
 
-inoremap oso ố
-inoremap ofo ồ
-inoremap ojo ộ
-inoremap oro ổ
-inoremap oxo ỗ
+lnoremap oso ố
+lnoremap ofo ồ
+lnoremap ojo ộ
+lnoremap oro ổ
+lnoremap oxo ỗ
 
-inoremap ooys ốy
-inoremap ooyf ồy
-inoremap ooyj ộy
-inoremap ooyr ổy
-inoremap ooyx ỗy
+lnoremap ooys ốy
+lnoremap ooyf ồy
+lnoremap ooyj ộy
+lnoremap ooyr ổy
+lnoremap ooyx ỗy
 
-inoremap oois ối
-inoremap ooif ồi
-inoremap ooij ội
-inoremap ooir ổi
-inoremap ooix ỗi
+lnoremap oois ối
+lnoremap ooif ồi
+lnoremap ooij ội
+lnoremap ooir ổi
+lnoremap ooix ỗi
 
-inoremap oons ốn
-inoremap oonf ồn
-inoremap oonj ộn
-inoremap oonr ổn
-inoremap oonx ỗn
+lnoremap oons ốn
+lnoremap oonf ồn
+lnoremap oonj ộn
+lnoremap oonr ổn
+lnoremap oonx ỗn
 
-inoremap oongs ống
-inoremap oongf ồng
-inoremap oongj ộng
-inoremap oongr ổng
-inoremap oongx ỗng
+lnoremap oongs ống
+lnoremap oongf ồng
+lnoremap oongj ộng
+lnoremap oongr ổng
+lnoremap oongx ỗng
 
-inoremap oonhs ốnh
-inoremap oonhf ồnh
-inoremap oonhj ộnh
-inoremap oonhr ổnh
-inoremap oonhx ỗnh
+lnoremap oonhs ốnh
+lnoremap oonhf ồnh
+lnoremap oonhj ộnh
+lnoremap oonhr ổnh
+lnoremap oonhx ỗnh
 
-inoremap oocs ốc
-inoremap oocf ồc
-inoremap oocj ộc
-inoremap oocr ổc
-inoremap oocx ỗc
+lnoremap oocs ốc
+lnoremap oocf ồc
+lnoremap oocj ộc
+lnoremap oocr ổc
+lnoremap oocx ỗc
 
-inoremap oops ốp
-inoremap oopf ồp
-inoremap oopj ộp
-inoremap oopr ổp
-inoremap oopx ỗp
+lnoremap oops ốp
+lnoremap oopf ồp
+lnoremap oopj ộp
+lnoremap oopr ổp
+lnoremap oopx ỗp
 
-inoremap ooms ốm
-inoremap oomf ồm
-inoremap oomj ộm
-inoremap oomr ổm
-inoremap oomx ỗm
+lnoremap ooms ốm
+lnoremap oomf ồm
+lnoremap oomj ộm
+lnoremap oomr ổm
+lnoremap oomx ỗm
 
-inoremap oots ốt
-inoremap ootf ồt
-inoremap ootj ột
-inoremap ootr ổt
-inoremap ootx ỗt
+lnoremap oots ốt
+lnoremap ootf ồt
+lnoremap ootj ột
+lnoremap ootr ổt
+lnoremap ootx ỗt
 
 "ơ
-inoremap ow ơ
-inoremap ows ớ
-inoremap owf ờ
-inoremap owj ợ
-inoremap owr ở
-inoremap owx ỡ
+lnoremap ow ơ
+lnoremap ows ớ
+lnoremap owf ờ
+lnoremap owj ợ
+lnoremap owr ở
+lnoremap owx ỡ
 
-inoremap osw ớ
-inoremap ofw ờ
-inoremap ojw ợ
-inoremap orw ở
-inoremap oxw ỡ
+lnoremap osw ớ
+lnoremap ofw ờ
+lnoremap ojw ợ
+lnoremap orw ở
+lnoremap oxw ỡ
 
-inoremap oyws ớy
-inoremap oywf ờy
-inoremap oywj ợy
-inoremap oywr ởy
-inoremap oywx ỡy
+lnoremap oyws ớy
+lnoremap oywf ờy
+lnoremap oywj ợy
+lnoremap oywr ởy
+lnoremap oywx ỡy
 
-inoremap owys ớy
-inoremap owyf ờy
-inoremap owyj ợy
-inoremap owyr ởy
-inoremap owyx ỡy
+lnoremap owys ớy
+lnoremap owyf ờy
+lnoremap owyj ợy
+lnoremap owyr ởy
+lnoremap owyx ỡy
 
-inoremap oiws ới
-inoremap oiwf ời
-inoremap oiwj ợi
-inoremap oiwr ởi
-inoremap oiwx ỡi
+lnoremap oiws ới
+lnoremap oiwf ời
+lnoremap oiwj ợi
+lnoremap oiwr ởi
+lnoremap oiwx ỡi
 
-inoremap owis ới
-inoremap owif ời
-inoremap owij ợi
-inoremap owir ởi
-inoremap owix ỡi
+lnoremap owis ới
+lnoremap owif ời
+lnoremap owij ợi
+lnoremap owir ởi
+lnoremap owix ỡi
 
-inoremap onws ớn
-inoremap onwf ờn
-inoremap onwj ợn
-inoremap onwr ởn
-inoremap onwx ỡn
+lnoremap onws ớn
+lnoremap onwf ờn
+lnoremap onwj ợn
+lnoremap onwr ởn
+lnoremap onwx ỡn
 
-inoremap owns ớn
-inoremap ownf ờn
-inoremap ownj ợn
-inoremap ownr ởn
-inoremap ownx ỡn
+lnoremap owns ớn
+lnoremap ownf ờn
+lnoremap ownj ợn
+lnoremap ownr ởn
+lnoremap ownx ỡn
 
-inoremap owngs ớng
-inoremap owngf ờng
-inoremap owngj ợng
-inoremap owngr ởng
-inoremap owngx ỡng
+lnoremap owngs ớng
+lnoremap owngf ờng
+lnoremap owngj ợng
+lnoremap owngr ởng
+lnoremap owngx ỡng
 
-inoremap ownhs ớnh
-inoremap ownhf ờnh
-inoremap ownhj ợnh
-inoremap ownhr ởnh
-inoremap ownhx ỡnh
+lnoremap ownhs ớnh
+lnoremap ownhf ờnh
+lnoremap ownhj ợnh
+lnoremap ownhr ởnh
+lnoremap ownhx ỡnh
 
-inoremap ocws ớc
-inoremap ocwf ờc
-inoremap ocwj ợc
-inoremap ocwr ởc
-inoremap ocwx ỡc
+lnoremap ocws ớc
+lnoremap ocwf ờc
+lnoremap ocwj ợc
+lnoremap ocwr ởc
+lnoremap ocwx ỡc
 
-inoremap owcs ớc
-inoremap owcf ờc
-inoremap owcj ợc
-inoremap owcr ởc
-inoremap owcx ỡc
+lnoremap owcs ớc
+lnoremap owcf ờc
+lnoremap owcj ợc
+lnoremap owcr ởc
+lnoremap owcx ỡc
 
-inoremap opws ớp
-inoremap opwf ờp
-inoremap opwj ợp
-inoremap opwr ởp
-inoremap opwx ỡp
+lnoremap opws ớp
+lnoremap opwf ờp
+lnoremap opwj ợp
+lnoremap opwr ởp
+lnoremap opwx ỡp
 
-inoremap owps ớp
-inoremap owpf ờp
-inoremap owpj ợp
-inoremap owpr ởp
-inoremap owpx ỡp
+lnoremap owps ớp
+lnoremap owpf ờp
+lnoremap owpj ợp
+lnoremap owpr ởp
+lnoremap owpx ỡp
 
-inoremap omws ớm
-inoremap omwf ờm
-inoremap omwj ợm
-inoremap omwr ởm
-inoremap omwx ỡm
+lnoremap omws ớm
+lnoremap omwf ờm
+lnoremap omwj ợm
+lnoremap omwr ởm
+lnoremap omwx ỡm
 
-inoremap owms ớm
-inoremap owmf ờm
-inoremap owmj ợm
-inoremap owmr ởm
-inoremap owmx ỡm
+lnoremap owms ớm
+lnoremap owmf ờm
+lnoremap owmj ợm
+lnoremap owmr ởm
+lnoremap owmx ỡm
 
-inoremap otws ớt
-inoremap otwf ờt
-inoremap otwj ợt
-inoremap otwr ởt
-inoremap otwx ỡt
+lnoremap otws ớt
+lnoremap otwf ờt
+lnoremap otwj ợt
+lnoremap otwr ởt
+lnoremap otwx ỡt
 
-inoremap owts ớt
-inoremap owtf ờt
-inoremap owtj ợt
-inoremap owtr ởt
-inoremap owtx ỡt
+lnoremap owts ớt
+lnoremap owtf ờt
+lnoremap owtj ợt
+lnoremap owtr ởt
+lnoremap owtx ỡt
 
 "qu
-inoremap quas quá
-inoremap quaf quà
-inoremap quaj quạ
-inoremap quar quả
-inoremap quax quã
+lnoremap quas quá
+lnoremap quaf quà
+lnoremap quaj quạ
+lnoremap quar quả
+lnoremap quax quã
 
 "ua
-inoremap uas úa
-inoremap uaf ùa
-inoremap uaj ụa
-inoremap uar ủa
-inoremap uax ũa
+lnoremap uas úa
+lnoremap uaf ùa
+lnoremap uaj ụa
+lnoremap uar ủa
+lnoremap uax ũa
 
 "u
-inoremap us ú
-inoremap uf ù
-inoremap uj ụ
-inoremap ur ủ
-inoremap ux ũ
+lnoremap us ú
+lnoremap uf ù
+lnoremap uj ụ
+lnoremap ur ủ
+lnoremap ux ũ
 
-inoremap uis úi
-inoremap uif ùi
-inoremap uij ụi
-inoremap uir ủi
-inoremap uix ũi
+lnoremap uis úi
+lnoremap uif ùi
+lnoremap uij ụi
+lnoremap uir ủi
+lnoremap uix ũi
 
-inoremap uns ún
-inoremap unf ùn
-inoremap unj ụn
-inoremap unr ủn
-inoremap unx ũn
+lnoremap uns ún
+lnoremap unf ùn
+lnoremap unj ụn
+lnoremap unr ủn
+lnoremap unx ũn
 
-inoremap ungs úng
-inoremap ungf ùng
-inoremap ungj ụng
-inoremap ungr ủng
-inoremap ungx ũng
+lnoremap ungs úng
+lnoremap ungf ùng
+lnoremap ungj ụng
+lnoremap ungr ủng
+lnoremap ungx ũng
 
-inoremap unhs únh
-inoremap unhf ùnh
-inoremap unhj ụnh
-inoremap unhr ủnh
-inoremap unhx ũnh
+lnoremap unhs únh
+lnoremap unhf ùnh
+lnoremap unhj ụnh
+lnoremap unhr ủnh
+lnoremap unhx ũnh
 
-inoremap ums úm
-inoremap umf ùm
-inoremap umj ụm
-inoremap umr ủm
-inoremap umx ũm
+lnoremap ums úm
+lnoremap umf ùm
+lnoremap umj ụm
+lnoremap umr ủm
+lnoremap umx ũm
 
-inoremap ucs úc
-inoremap ucf ùc
-inoremap ucj ục
-inoremap ucr ủc
-inoremap ucx ũc
+lnoremap ucs úc
+lnoremap ucf ùc
+lnoremap ucj ục
+lnoremap ucr ủc
+lnoremap ucx ũc
 
-inoremap ups úp
-inoremap upf ùp
-inoremap upj ụp
-inoremap upr ủp
-inoremap upx ũp
+lnoremap ups úp
+lnoremap upf ùp
+lnoremap upj ụp
+lnoremap upr ủp
+lnoremap upx ũp
 
-inoremap uts út
-inoremap utf ùt
-inoremap utj ụt
-inoremap utr ủt
-inoremap utx ũt
+lnoremap uts út
+lnoremap utf ùt
+lnoremap utj ụt
+lnoremap utr ủt
+lnoremap utx ũt
 
 "ươ
-inoremap uow ươ
+lnoremap uow ươ
 
-inoremap uoiw ươi
-inoremap uoiws ưới
-inoremap uoiwf ười
-inoremap uoiwj ượi
-inoremap uoiwr ưởi
-inoremap uoiwx ưỡi
+lnoremap uoiw ươi
+lnoremap uoiws ưới
+lnoremap uoiwf ười
+lnoremap uoiwj ượi
+lnoremap uoiwr ưởi
+lnoremap uoiwx ưỡi
 
-inoremap uowis ưới
-inoremap uowif ười
-inoremap uowij ượi
-inoremap uowir ưởi
-inoremap uowix ưỡi
+lnoremap uowis ưới
+lnoremap uowif ười
+lnoremap uowij ượi
+lnoremap uowir ưởi
+lnoremap uowix ưỡi
 
-inoremap uocw ươc
-inoremap uocws ước
-inoremap uocwf ườc
-inoremap uocwj ược
-inoremap uocwr ưởc
-inoremap uocwx ưỡc
+lnoremap uocw ươc
+lnoremap uocws ước
+lnoremap uocwf ườc
+lnoremap uocwj ược
+lnoremap uocwr ưởc
+lnoremap uocwx ưỡc
 
-inoremap uowcs ước
-inoremap uowcf ườc
-inoremap uowcj ược
-inoremap uowcr ưởc
-inoremap uowcx ưỡc
+lnoremap uowcs ước
+lnoremap uowcf ườc
+lnoremap uowcj ược
+lnoremap uowcr ưởc
+lnoremap uowcx ưỡc
 
-inoremap uongw ương
-inoremap uongws ướng
-inoremap uongwf ường
-inoremap uongwj ượng
-inoremap uongwr ưởng
-inoremap uongwx ưỡng
+lnoremap uongw ương
+lnoremap uongws ướng
+lnoremap uongwf ường
+lnoremap uongwj ượng
+lnoremap uongwr ưởng
+lnoremap uongwx ưỡng
 
-inoremap uowngs ướng
-inoremap uowngf ường
-inoremap uowngj ượng
-inoremap uowngr ưởng
-inoremap uowngx ưỡng
+lnoremap uowngs ướng
+lnoremap uowngf ường
+lnoremap uowngj ượng
+lnoremap uowngr ưởng
+lnoremap uowngx ưỡng
 
-inoremap uonws ướn
-inoremap uonwf ườn
-inoremap uonwj ượn
-inoremap uonwr ưởn
-inoremap uonwx ưỡn
+lnoremap uonws ướn
+lnoremap uonwf ườn
+lnoremap uonwj ượn
+lnoremap uonwr ưởn
+lnoremap uonwx ưỡn
 
-inoremap uowns ướn
-inoremap uownf ườn
-inoremap uownj ượn
-inoremap uownr ưởn
-inoremap uownx ưỡn
+lnoremap uowns ướn
+lnoremap uownf ườn
+lnoremap uownj ượn
+lnoremap uownr ưởn
+lnoremap uownx ưỡn
 
-inoremap uopws ướp
-inoremap uopwf ườp
-inoremap uopwj ượp
-inoremap uopwr ưởp
-inoremap uopwx ưỡp
+lnoremap uopws ướp
+lnoremap uopwf ườp
+lnoremap uopwj ượp
+lnoremap uopwr ưởp
+lnoremap uopwx ưỡp
 
-inoremap uowps ướp
-inoremap uowpf ườp
-inoremap uowpj ượp
-inoremap uowpr ưởp
-inoremap uowpx ưỡp
+lnoremap uowps ướp
+lnoremap uowpf ườp
+lnoremap uowpj ượp
+lnoremap uowpr ưởp
+lnoremap uowpx ưỡp
 
-inoremap uotws ướt
-inoremap uotwf ườt
-inoremap uotwj ượt
-inoremap uotwr ưởt
-inoremap uotwx ưỡt
+lnoremap uotws ướt
+lnoremap uotwf ườt
+lnoremap uotwj ượt
+lnoremap uotwr ưởt
+lnoremap uotwx ưỡt
 
-inoremap uowts ướt
-inoremap uowtf ườt
-inoremap uowtj ượt
-inoremap uowtr ưởt
-inoremap uowtx ưỡt
+lnoremap uowts ướt
+lnoremap uowtf ườt
+lnoremap uowtj ượt
+lnoremap uowtr ưởt
+lnoremap uowtx ưỡt
 
 "uy
-inoremap uys uý
-inoremap uyf uỳ
-inoremap uyj uỵ
-inoremap uyr uỷ
-inoremap uyx uỹ
+lnoremap uys uý
+lnoremap uyf uỳ
+lnoremap uyj uỵ
+lnoremap uyr uỷ
+lnoremap uyx uỹ
 
-inoremap uyps uýp
-inoremap uypf uỳp
-inoremap uypj uỵp
-inoremap uypr uỷp
-inoremap uypx uỹp
+lnoremap uyps uýp
+lnoremap uypf uỳp
+lnoremap uypj uỵp
+lnoremap uypr uỷp
+lnoremap uypx uỹp
 
-inoremap uyts uýt
-inoremap uytf uỳt
-inoremap uytj uỵt
-inoremap uytr uỷt
-inoremap uytx uỹt
+lnoremap uyts uýt
+lnoremap uytf uỳt
+lnoremap uytj uỵt
+lnoremap uytr uỷt
+lnoremap uytx uỹt
 
-inoremap uycs uýc
-inoremap uycf uỳc
-inoremap uycj uỵc
-inoremap uycr uỷc
-inoremap uycx uỹc
+lnoremap uycs uýc
+lnoremap uycf uỳc
+lnoremap uycj uỵc
+lnoremap uycr uỷc
+lnoremap uycx uỹc
 
-inoremap uynhs uýnh
-inoremap uynhf uỳnh
-inoremap uynhj uỵnh
-inoremap uynhr uỷnh
-inoremap uynhx uỹnh
-
-"ư
-inoremap uaw ưa
-inoremap uwas ứa
-inoremap uwaf ừa
-inoremap uwaj ựa
-inoremap uwar ửa
-inoremap uwax ữa
-
-inoremap uaws ứa
-inoremap uawf ừa
-inoremap uawj ựa
-inoremap uawr ửa
-inoremap uawx ữa
+lnoremap uynhs uýnh
+lnoremap uynhf uỳnh
+lnoremap uynhj uỵnh
+lnoremap uynhr uỷnh
+lnoremap uynhx uỹnh
 
 "ư
-inoremap uw ư
-inoremap uws ứ
-inoremap uwf ừ
-inoremap uwj ự
-inoremap uwr ử
-inoremap uwx ữ
+lnoremap uaw ưa
+lnoremap uwas ứa
+lnoremap uwaf ừa
+lnoremap uwaj ựa
+lnoremap uwar ửa
+lnoremap uwax ữa
 
-inoremap usw ứ
-inoremap ufw ừ
-inoremap ujw ự
-inoremap urw ử
-inoremap uxw ữ
+lnoremap uaws ứa
+lnoremap uawf ừa
+lnoremap uawj ựa
+lnoremap uawr ửa
+lnoremap uawx ữa
 
-" inoremap uwys ứy
-" inoremap uwyf ừy
-" inoremap uwyj ựy
-" inoremap uwyr ửy
-" inoremap uwyx ữy
+"ư
+lnoremap uw ư
+lnoremap uws ứ
+lnoremap uwf ừ
+lnoremap uwj ự
+lnoremap uwr ử
+lnoremap uwx ữ
 
-inoremap uiws ứi
-inoremap uiwf ừi
-inoremap uiwj ựi
-inoremap uiwr ửi
-inoremap uiwx ữi
+lnoremap usw ứ
+lnoremap ufw ừ
+lnoremap ujw ự
+lnoremap urw ử
+lnoremap uxw ữ
 
-inoremap uwis ứi
-inoremap uwif ừi
-inoremap uwij ựi
-inoremap uwir ửi
-inoremap uwix ữi
+" lnoremap uwys ứy
+" lnoremap uwyf ừy
+" lnoremap uwyj ựy
+" lnoremap uwyr ửy
+" lnoremap uwyx ữy
 
-inoremap unws ứn
-inoremap unwf ừn
-inoremap unwj ựn
-inoremap unwr ửn
-inoremap unwx ữn
+lnoremap uiws ứi
+lnoremap uiwf ừi
+lnoremap uiwj ựi
+lnoremap uiwr ửi
+lnoremap uiwx ữi
 
-inoremap uwns ứn
-inoremap uwnf ừn
-inoremap uwnj ựn
-inoremap uwnr ửn
-inoremap uwnx ữn
+lnoremap uwis ứi
+lnoremap uwif ừi
+lnoremap uwij ựi
+lnoremap uwir ửi
+lnoremap uwix ữi
 
-inoremap uwngs ứng
-inoremap uwngf ừng
-inoremap uwngj ựng
-inoremap uwngr ửng
-inoremap uwngx ững
+lnoremap unws ứn
+lnoremap unwf ừn
+lnoremap unwj ựn
+lnoremap unwr ửn
+lnoremap unwx ữn
 
-inoremap uwnhs ứnh
-inoremap uwnhf ừnh
-inoremap uwnhj ựnh
-inoremap uwnhr ửnh
-inoremap uwnhx ữnh
+lnoremap uwns ứn
+lnoremap uwnf ừn
+lnoremap uwnj ựn
+lnoremap uwnr ửn
+lnoremap uwnx ữn
 
-inoremap ucws ức
-inoremap ucwf ừc
-inoremap ucwj ực
-inoremap ucwr ửc
-inoremap ucwx ữc
+lnoremap uwngs ứng
+lnoremap uwngf ừng
+lnoremap uwngj ựng
+lnoremap uwngr ửng
+lnoremap uwngx ững
 
-inoremap uwcs ức
-inoremap uwcf ừc
-inoremap uwcj ực
-inoremap uwcr ửc
-inoremap uwcx ữc
+lnoremap uwnhs ứnh
+lnoremap uwnhf ừnh
+lnoremap uwnhj ựnh
+lnoremap uwnhr ửnh
+lnoremap uwnhx ữnh
 
-inoremap upws ứp
-inoremap upwf ừp
-inoremap upwj ựp
-inoremap upwr ửp
-inoremap upwx ữp
+lnoremap ucws ức
+lnoremap ucwf ừc
+lnoremap ucwj ực
+lnoremap ucwr ửc
+lnoremap ucwx ữc
 
-inoremap uwps ứp
-inoremap uwpf ừp
-inoremap uwpj ựp
-inoremap uwpr ửp
-inoremap uwpx ữp
+lnoremap uwcs ức
+lnoremap uwcf ừc
+lnoremap uwcj ực
+lnoremap uwcr ửc
+lnoremap uwcx ữc
 
-inoremap umws ứm
-inoremap umwf ừm
-inoremap umwj ựm
-inoremap umwr ửm
-inoremap umwx ữm
+lnoremap upws ứp
+lnoremap upwf ừp
+lnoremap upwj ựp
+lnoremap upwr ửp
+lnoremap upwx ữp
 
-inoremap uwms ứm
-inoremap uwmf ừm
-inoremap uwmj ựm
-inoremap uwmr ửm
-inoremap uwmx ữm
+lnoremap uwps ứp
+lnoremap uwpf ừp
+lnoremap uwpj ựp
+lnoremap uwpr ửp
+lnoremap uwpx ữp
 
-inoremap utws ứt
-inoremap utwf ừt
-inoremap utwj ựt
-inoremap utwr ửt
-inoremap utwx ữt
+lnoremap umws ứm
+lnoremap umwf ừm
+lnoremap umwj ựm
+lnoremap umwr ửm
+lnoremap umwx ữm
 
-inoremap uwts ứt
-inoremap uwtf ừt
-inoremap uwtj ựt
-inoremap uwtr ửt
-inoremap uwtx ữt
+lnoremap uwms ứm
+lnoremap uwmf ừm
+lnoremap uwmj ựm
+lnoremap uwmr ửm
+lnoremap uwmx ữm
+
+lnoremap utws ứt
+lnoremap utwf ừt
+lnoremap utwj ựt
+lnoremap utwr ửt
+lnoremap utwx ữt
+
+lnoremap uwts ứt
+lnoremap uwtf ừt
+lnoremap uwtj ựt
+lnoremap uwtr ửt
+lnoremap uwtx ữt
 
 "y
-inoremap ys ý
-inoremap yf ỳ
-inoremap yj ỵ
-inoremap yr ỷ
-inoremap yx ỹ
+lnoremap ys ý
+lnoremap yf ỳ
+lnoremap yj ỵ
+lnoremap yr ỷ
+lnoremap yx ỹ
 
 "đ
-inoremap dd đ
+lnoremap dd đ
 
 "UPPER CASE
 
 "A
-inoremap AS Á
-inoremap AF À
-inoremap AJ Ạ
-inoremap AR Ả
-inoremap AX Ã
+lnoremap AS Á
+lnoremap AF À
+lnoremap AJ Ạ
+lnoremap AR Ả
+lnoremap AX Ã
 
 "Ă
-inoremap AW Ă
-inoremap AWS Ắ
-inoremap AWF Ằ
-inoremap AWJ Ặ
-inoremap AWR Ẳ
-inoremap AWX Ẵ
+lnoremap AW Ă
+lnoremap AWS Ắ
+lnoremap AWF Ằ
+lnoremap AWJ Ặ
+lnoremap AWR Ẳ
+lnoremap AWX Ẵ
 
 "Â
-inoremap AA Â
-inoremap AAS Ấ
-inoremap AAF Ầ
-inoremap AAJ Ậ
-inoremap AAR Ẩ
-inoremap AAX Ẫ
+lnoremap AA Â
+lnoremap AAS Ấ
+lnoremap AAF Ầ
+lnoremap AAJ Ậ
+lnoremap AAR Ẩ
+lnoremap AAX Ẫ
 
 "I
-inoremap IS Í
-inoremap IF Ì
-inoremap IJ Ị
-inoremap IR Ỉ
-inoremap IX Ĩ
+lnoremap IS Í
+lnoremap IF Ì
+lnoremap IJ Ị
+lnoremap IR Ỉ
+lnoremap IX Ĩ
 
 "E
-inoremap ES É
-inoremap EF È
-inoremap EJ Ẹ
-inoremap ER Ẻ
-inoremap EX Ẽ
+lnoremap ES É
+lnoremap EF È
+lnoremap EJ Ẹ
+lnoremap ER Ẻ
+lnoremap EX Ẽ
 
 "Ê
-inoremap EE Ê
-inoremap EES Ế
-inoremap EEF Ề
-inoremap EEJ Ệ
-inoremap EER Ể
-inoremap EEX Ễ
+lnoremap EE Ê
+lnoremap EES Ế
+lnoremap EEF Ề
+lnoremap EEJ Ệ
+lnoremap EER Ể
+lnoremap EEX Ễ
 
 "O
-inoremap OS Ó
-inoremap OF Ò
-inoremap OJ Ọ
-inoremap OR Ỏ
-inoremap OX Õ
+lnoremap OS Ó
+lnoremap OF Ò
+lnoremap OJ Ọ
+lnoremap OR Ỏ
+lnoremap OX Õ
 
 "Ô
-inoremap OO Ô
-inoremap OOS Ố
-inoremap OOF Ồ
-inoremap OOJ Ộ
-inoremap OOR Ổ
-inoremap OOX Ỗ
+lnoremap OO Ô
+lnoremap OOS Ố
+lnoremap OOF Ồ
+lnoremap OOJ Ộ
+lnoremap OOR Ổ
+lnoremap OOX Ỗ
 
 "Ơ
-inoremap OW Ơ
-inoremap OWS Ớ
-inoremap OWF Ờ
-inoremap OWJ Ợ
-inoremap OWR Ở
-inoremap OWX Ỡ
+lnoremap OW Ơ
+lnoremap OWS Ớ
+lnoremap OWF Ờ
+lnoremap OWJ Ợ
+lnoremap OWR Ở
+lnoremap OWX Ỡ
 
 "U
-inoremap US Ú
-inoremap UF Ù
-inoremap UJ Ụ
-inoremap UR Ủ
-inoremap UX Ũ
+lnoremap US Ú
+lnoremap UF Ù
+lnoremap UJ Ụ
+lnoremap UR Ủ
+lnoremap UX Ũ
 
 "Ư
-inoremap UW Ư
-inoremap UWS Ứ
-inoremap UWF Ừ
-inoremap UWJ Ự
-inoremap UWR Ử
-inoremap UWX Ữ
+lnoremap UW Ư
+lnoremap UWS Ứ
+lnoremap UWF Ừ
+lnoremap UWJ Ự
+lnoremap UWR Ử
+lnoremap UWX Ữ
 
 "Y
-inoremap YS Ý
-inoremap YF Ỳ
-inoremap YJ Ỵ
-inoremap YR Ỷ
-inoremap YX Ỹ
+lnoremap YS Ý
+lnoremap YF Ỳ
+lnoremap YJ Ỵ
+lnoremap YR Ỷ
+lnoremap YX Ỹ
 
 "Đ
-inoremap DD Đ
+lnoremap DD Đ
+
+" Mix case
+
+"A
+lnoremap As Á
+lnoremap Af À
+lnoremap Aj Ạ
+lnoremap Ar Ả
+lnoremap Ax Ã
+
+"Ă
+lnoremap Aw Ă
+lnoremap Aws Ắ
+lnoremap Awf Ằ
+lnoremap Awj Ặ
+lnoremap Awr Ẳ
+lnoremap Awx Ẵ
+
+"Â
+lnoremap Aa Â
+lnoremap Aas Ấ
+lnoremap Aaf Ầ
+lnoremap Aaj Ậ
+lnoremap Aar Ẩ
+lnoremap Aax Ẫ
+
+"I
+lnoremap Is Í
+lnoremap If Ì
+lnoremap Ij Ị
+lnoremap Ir Ỉ
+lnoremap Ix Ĩ
+
+"E
+lnoremap Es É
+lnoremap Ef È
+lnoremap Ej Ẹ
+lnoremap Er Ẻ
+lnoremap Ex Ẽ
+
+"Ê
+lnoremap Ee Ê
+lnoremap Ees Ế
+lnoremap Eef Ề
+lnoremap Eej Ệ
+lnoremap Eer Ể
+lnoremap Eex Ễ
+
+"O
+lnoremap Os Ó
+lnoremap Of Ò
+lnoremap Oj Ọ
+lnoremap Or Ỏ
+lnoremap Ox Õ
+
+"Ô
+lnoremap Oo Ô
+lnoremap Oos Ố
+lnoremap Oof Ồ
+lnoremap Ooj Ộ
+lnoremap Oor Ổ
+lnoremap Oox Ỗ
+
+"Ơ
+lnoremap Ow Ơ
+lnoremap Ows Ớ
+lnoremap Owf Ờ
+lnoremap Owj Ợ
+lnoremap Owr Ở
+lnoremap Owx Ỡ
+
+"U
+lnoremap Us Ú
+lnoremap Uf Ù
+lnoremap Uj Ụ
+lnoremap Ur Ủ
+lnoremap Ux Ũ
+
+"Ư
+lnoremap Uw Ư
+lnoremap Uws Ứ
+lnoremap Uwf Ừ
+lnoremap Uwj Ự
+lnoremap Uwr Ử
+lnoremap Uwx Ữ
+
+"Y
+lnoremap Ys Ý
+lnoremap Yf Ỳ
+lnoremap Yj Ỵ
+lnoremap Yr Ỷ
+lnoremap Yx Ỹ
+
+"Đ
+lnoremap Dd Đ
 
