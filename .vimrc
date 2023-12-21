@@ -3,9 +3,13 @@
 
 let mapleader=" "
 set expandtab
+set lbr
+set wrap
 
 " This make :lmap default on, toggle with <C-^> (only in insert-mode or a-like mode) to turn lang-mode off
 set imi=1
+" Quick toggle, you still want to use <C-^> when using search '/?', etc
+inoremap <F2> <C-^>
 
 " Set tab width to 4 spaces
 set tabstop=4
@@ -28,16 +32,49 @@ nnoremap <C-d> <C-d>zz
 inoremap <C-h> <C-Left>
 inoremap <C-l> <C-\><C-n>ea
 
+" Buffer
+nnoremap <leader>bn :bn<CR>
+nnoremap <leader>bN :bp<CR>
+nnoremap <leader>bp :bp<CR>
+
+" BESTTHING TO HAPPEN - QUICK JUMP TO N'TH BUFFER USING <NUMBER><F2> OR JUMP BETWEEN MOST RECENT BUFFER
+noremap <F2> <C-^>
+
+" Who need upper
+nnoremap U <C-r>
+
+" I do need upper, why
+vnoremap <F3> U
+
+" Source this file
+nnoremap <leader><leader> :so %<CR>
+
+" No more Extended mode, or Helper
+nnoremap Q <nop>
+nnoremap <F1> <nop>
+
 " Find/n/Replace helper
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+nnoremap <leader>S :vim/<C-r><C-w>/gj *<Left><Left><Left><Left><Left>
 
 " Telex dummy
+"gi
+lnoremap gi gi
+lnoremap gif gì
+
 "ao
 lnoremap aos áo
 lnoremap aof ào
 lnoremap aoj ạo
 lnoremap aor ảo
 lnoremap aox ão
+
+"a<nop>
+lnoremap asz as
+lnoremap afz af
+lnoremap ajz aj
+lnoremap arz ar
+lnoremap axz ax
 
 "a
 lnoremap as á
@@ -99,6 +136,12 @@ lnoremap atf àt
 lnoremap atj ạt
 lnoremap atr ảt
 lnoremap atx ãt
+
+lnoremap aus áu
+lnoremap auf àu
+lnoremap auj ạu
+lnoremap aur ảu
+lnoremap aux ãu
 
 "ă
 lnoremap aw ă
@@ -167,6 +210,23 @@ lnoremap afw ằ
 lnoremap ajw ặ
 lnoremap arw ẳ
 lnoremap axw ẵ
+
+"âu
+lnoremap aua âu
+lnoremap aaus ấu
+lnoremap aauf ầu
+lnoremap aauj ậu
+lnoremap aaur ẩu
+lnoremap aaux ẫu
+
+lnoremap auas ấu
+lnoremap auaf ầu
+lnoremap auaj ậu
+lnoremap auar ẩu
+lnoremap auax ẫu
+
+"aa
+lnoremap aaz aa
 
 "â
 lnoremap aa â
@@ -237,17 +297,36 @@ lnoremap ara ẩ
 lnoremap axa ẫ
 
 "iê
-" lnoremap ieens iến
-" lnoremap ieenf iền
-" lnoremap ieenj iện
-" lnoremap ieenr iển
-" lnoremap ieenx iễn
+lnoremap iense iến
+lnoremap ienfe iền
+lnoremap ienje iện
+lnoremap ienre iển
+lnoremap ienxe iễn
+
+lnoremap ienes iến
+lnoremap ienef iền
+lnoremap ienej iện
+lnoremap iener iển
+lnoremap ienex iễn
 
 " lnoremap ieengs iếng
 " lnoremap ieengf iềng
 " lnoremap ieengj iệng
 " lnoremap ieengr iểng
 " lnoremap ieengx iễng
+
+"iải
+lnoremap iasi iái
+lnoremap iafi iài
+lnoremap iaji iại
+lnoremap iari iải
+lnoremap iaxi iãi
+
+lnoremap iais iái
+lnoremap iaif iài
+lnoremap iaij iại
+lnoremap iair iải
+lnoremap iaix iãi
 
 "i
 lnoremap is í
@@ -261,6 +340,12 @@ lnoremap ichf ìch
 lnoremap ichj ịch
 lnoremap ichr ỉch
 lnoremap ichx ĩch
+
+lnoremap ias ía
+lnoremap iaf ìa
+lnoremap iaj ịa
+lnoremap iar ỉa
+lnoremap iax ĩa
 
 lnoremap ics íc
 lnoremap icf ìc
@@ -377,6 +462,12 @@ lnoremap eeuf ều
 lnoremap eeuj ệu
 lnoremap eeur ểu
 lnoremap eeux ễu
+
+lnoremap eues ếu
+lnoremap euef ều
+lnoremap euej ệu
+lnoremap euer ểu
+lnoremap euex ễu
 
 "ê
 lnoremap ee ê
@@ -620,6 +711,7 @@ lnoremap ojw ợ
 lnoremap orw ở
 lnoremap oxw ỡ
 
+lnoremap oyw ơy
 lnoremap oyws ớy
 lnoremap oywf ờy
 lnoremap oywj ợy
@@ -632,6 +724,7 @@ lnoremap owyj ợy
 lnoremap owyr ởy
 lnoremap owyx ỡy
 
+lnoremap oiw ơi
 lnoremap oiws ới
 lnoremap oiwf ời
 lnoremap oiwj ợi
@@ -644,6 +737,7 @@ lnoremap owij ợi
 lnoremap owir ởi
 lnoremap owix ỡi
 
+lnoremap onw ơn
 lnoremap onws ớn
 lnoremap onwf ờn
 lnoremap onwj ợn
@@ -656,11 +750,18 @@ lnoremap ownj ợn
 lnoremap ownr ởn
 lnoremap ownx ỡn
 
+lnoremap ongw ơng
 lnoremap owngs ớng
 lnoremap owngf ờng
 lnoremap owngj ợng
 lnoremap owngr ởng
 lnoremap owngx ỡng
+
+lnoremap ongws ớng
+lnoremap ongwf ờng
+lnoremap ongwj ợng
+lnoremap ongwr ởng
+lnoremap ongwx ỡng
 
 lnoremap ownhs ớnh
 lnoremap ownhf ờnh
@@ -717,11 +818,7 @@ lnoremap owtr ởt
 lnoremap owtx ỡt
 
 "qu
-lnoremap quas quá
-lnoremap quaf quà
-lnoremap quaj quạ
-lnoremap quar quả
-lnoremap quax quã
+lnoremap qu qu
 
 "ua
 lnoremap uas úa
@@ -864,11 +961,11 @@ lnoremap uowtr ưởt
 lnoremap uowtx ưỡt
 
 "uy
-lnoremap uys uý
-lnoremap uyf uỳ
-lnoremap uyj uỵ
-lnoremap uyr uỷ
-lnoremap uyx uỹ
+lnoremap uys úy
+lnoremap uyf ùy
+lnoremap uyj ụy
+lnoremap uyr ủy
+lnoremap uyx ũy
 
 lnoremap uyps uýp
 lnoremap uypf uỳp
@@ -958,6 +1055,18 @@ lnoremap uwngj ựng
 lnoremap uwngr ửng
 lnoremap uwngx ững
 
+lnoremap unwgs ứng
+lnoremap unwgf ừng
+lnoremap unwgj ựng
+lnoremap unwgr ửng
+lnoremap unwgx ững
+
+lnoremap ungws ứng
+lnoremap ungwf ừng
+lnoremap ungwj ựng
+lnoremap ungwr ửng
+lnoremap ungwx ững
+
 lnoremap uwnhs ứnh
 lnoremap uwnhf ừnh
 lnoremap uwnhj ựnh
@@ -1012,12 +1121,21 @@ lnoremap uwtj ựt
 lnoremap uwtr ửt
 lnoremap uwtx ữt
 
+lnoremap uwus ứu
+lnoremap uwuf ừu
+lnoremap uwuj ựu
+lnoremap uwur ửu
+lnoremap uwux ữu
+
 "y
 lnoremap ys ý
 lnoremap yf ỳ
 lnoremap yj ỵ
 lnoremap yr ỷ
 lnoremap yx ỹ
+
+"dd
+lnoremap ddz dd
 
 "đ
 lnoremap dd đ
